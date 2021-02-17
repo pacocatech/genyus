@@ -6,9 +6,9 @@ This is a classic game using Arduino
 
 # Instructions
 
-1 - Clone the repository to get the code
-2 - Install PushButton lib (in folder lib)
-3 - Build the code and upload to your arduino
+1. Clone the repository to get the code
+2. Install PushButton lib (in folder lib)
+3. Build the code and upload to your arduino
 
 # List of required items
 
