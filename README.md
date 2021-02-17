@@ -4,13 +4,13 @@ Hello folks!
 
 This is a classic game using Arduino 
 
-#Instructions
+# Instructions
 
 1 - Clone the repository to get the code
 2 - Install PushButton lib (in folder lib)
 3 - Build the code and upload to your arduino
 
-#List of required items
+# List of required items
 
 - 3D Case (avaiable in http:// or 'case' folder)
 - 4 leds (RED/YELLOW/BLUE/GREEN)
