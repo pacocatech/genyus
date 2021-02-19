@@ -44,8 +44,8 @@ PushButton BUTTON_BLUE(SW_B, 30);
 #define S_B 698
 
 //definições para o jogo
-#define maxLevel 10
-#define speedGame 700
+#define maxLevel 3
+#define speedGame 600
 
 //controla as jogadas
 byte hiddenSequence[maxLevel];
@@ -87,6 +87,7 @@ void setup()
 
   //BUZZER
   pinMode(BUZZER, OUTPUT);
+  pinMode(13, OUTPUT);
 
   //vamos alimentar o randomSeed para que o jogo nunca seja igual
   randomSeed(analogRead(A0));
@@ -112,11 +113,12 @@ void loop()
 
   //vamos verificar se o jogador não errou a sequencia
   if (checkResultEndGame()) {
-    
-    for (byte nota = 0 ; nota < 156 ; nota++) {
+
+    //bonus
+    /*for (byte nota = 0 ; nota < 156 ; nota++) {
       tone(BUZZER, mario[nota], duracaoMario[nota]);
       delay(pausaMario[nota]);
-    }
+    }*/
 
     for (byte nota = 0; nota < 2 ; nota++) {
       tone(BUZZER, errado[nota], duracaoErrado[nota]);
@@ -124,7 +126,8 @@ void loop()
     }
 
     Serial.println("VOCÊ ERROU!, FIM DE JOGO");
-    controlAllLeds(LOW);
+    
+    controlAllLeds(HIGH);    
     while (true);
   }
 
